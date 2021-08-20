@@ -8,7 +8,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: blue,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/message-page');
+        },
         backgroundColor: green,
         child: Icon(
           Icons.add,
@@ -84,6 +86,7 @@ class HomePage extends StatelessWidget {
                         style: titleTextStyle,
                       ),
                       ChatTile(
+                        clickable: true,
                         imageUrl: 'assets/images/group1.png',
                         name: 'Jakarta Fair',
                         message: 'Why does everyone ca...',
